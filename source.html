@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Page Title</title>
+    <style>body {
+	background-color: black;
+}
+h1 {
+	text-align:center;
+	color:white;
+	font-family:Courier New;
+}
+.navigation {
+	position:relative;
+	display:inline-block;
+	background-color:rgba(0,0,0,0);
+	border-color:rgba(0,0,0,0);
+}
+.dropbutton {
+	border:none;
+	padding:16px
+	background:0;
+	color:rgba(50,50,255,1);
+	z-index:2;
+	font-size:20px;
+	text-decoration:none;
+	border-color: rgba(0,0,0,0);
+}
+.dropbutton:hover {
+	color:rgba(100,100,255,1)
+}
+.navigation-content {
+	min-width: 200px;
+	display:none;
+	position:absolute;
+	background-color:rgba(15,15,255,0.4);
+	padding:10px;
+	z-index: 1;
+	border-radius:22px 22px;
+	border:8px outset rgba(15,15,255,1);
+	color:white;
+}
+.navigation:hover .navigation-content {
+	display:block;
+}
+.navigation-content a {
+	text-decoration:none;
+	padding:12px 16px;
+	border-radius: 22px 11px;
+	border:8px outset rgba(15,15,255,1);
+	background-color:blue;
+	display:block;
+	color:white;
+	font-size:13px;
+	font-family:Courier;
+}
+#centertext {
+	color:white;
+	text-align:center;
+}
+.registerbutton {
+	border-radius:22px 11px;
+	border:8px outset rgba(15,15,255,1);
+	background-color:rgba(0,0,0,0);
+	color:white;
+	font-size:22px;
+	display:none;
+}
+.registerpage {
+	border:8px;
+	border-color:blue;
+	background-color:rgba(15,15,255,1);
+	color:white;
+	display:none;
+	height:200px;
+}
+.navagation-content .signup2 .registerpage {
+	display:block;
+}
+.jsbuttons {
+	border-radius:0px 0px;
+	border:8px outset rgba(15,15,255,1);
+	background-color:rgba(0,0,0,0);
+	font-size:22px;
+	color:white;
+	font-family:Courier;
+}
+.alertmepls {
+	border-radius:22px 22px;
+	border:8px outset rgba(15,15,255,1);
+	background-color:rgba(0,0,0,0);
+	font-size:22px;
+	color:rgb(50,50,255);
+	font-family:Courier;
+}
+#alrt{
+width:300px;
+height:150px;
+color:red;
+background:white;
+border-radius:15px;
+position:absolute;
+text-align:center;
+display:none;}
+#alrtbtn{
+width:90%;
+height:30px;
+position:absolute;
+left:5%;
+font-size: 20px;
+bottom:5%;
+background:white;
+border:1px solid black;
+border-radius:5px;}
+#alrtbtn:hover {
+background:royalblue;
+border:1px solid royalblue;
+color:white;}
+#atxt{
+font-size:26px;
+margin-top:50px;}
+.alertmepls:hover {
+	color:rgba(100,100,255,1)
+}</style>
+  <script>function aboutclan() {
+var claninfo = document.getElementById ("centertext").innerHTML = "SnpZ Clan is a call of duty clan with many custom gamemode servers including: Deathrun, Surf, Sniper Only Promod, Promod Live";var headerclaninfo = document.getElementById ("h1").innerHTML = "<a style='color:aqua'>Clan Info</a>"
+}
+window.onload = function (){
+var iw = window.innerWidth-300;
+var ih = window.innerHeight-250;
+var iwa = iw/2;
+var iha = ih/2;
+alrt.style.left= iwa +"px";
+alrt.style.top = iha + "px";
+alrt.style.right= iwa +"px";
+alrt.style.bottom = iha + "px";}
+var aob = false;
+function alert(txt){
+if(aob == false){
+aob = true;
+document.querySelector("body").innerHTML += '<div id="alrt"><p id="atxt"></p><button id="alrtbtn">Ok</button></div>';
+alrtbtn.onclick = function(){
+alrt.style.display = "none";}}
+alrt.style.display = "block";
+atxt.innerHTML = txt;}
+alert("Hello");
+function staff() {
+var cv = document.getElementById ("centertext").innerHTML = "<a style='color:red;'>Coder:</a><a style='color:white;font-family:Courier;'> SnpZ Hype</a>";var cv2 = document.getElementById ("h1").innerHTML = "<a style='color:aqua'>SnpZ</a><a style='color:yellow'> Network </a><a style='color:white;' </a>Staff"
+}
+function mods() {
+var mods = document.getElementById ("centertext").innerHTML = "<p style='color:aqua;font-size:22px'>SnpZ</p><p style='color:white'> Mods:</p><br /><p style='color:lime;'><a class='jsbuttons' href='https://github.com/BraXi/CoD4_DeathRun_1.2_Mod'>Deathrun 1.2 Source</a></input><br /><p style='color:lime;'><a class='jsbuttons'href='https://github.com/szabto/PromodLive220?files=1'>Promod Live 2.20 Source</a></input><br />";var mods2 = document.getElementById ("h1").innerHTML = "<a style='color:aqua'>SnpZ</a><a style='color:yellow'> Network </a><a style='color:white;' </a>Mods"
+}
+function alertmepls() {
+alert("Hi");
+}
+</script>
+	</head>
+	<body>
+	<h1 id="h1" align="center">Welcome To My Code!</h1>
+	<span class="navigation">
+	<input style="background-color:rgba(15,15,240,0);border-color:rgba(0,0,0,0);border-radius:22px 22px;border:8px outset rgba(15,15,255,1);" type="button" value="Navigation" class="dropbutton" ></input>
+	<span class="navigation-content">
+	<a onclick="aboutclan()">About SnpZ Clan</a>
+	<br />
+	<a onclick="staff()">Staff</a>
+	<br />
+	<a onclick="mods()">Mods</a>
+	</span>
+	</span>
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<br />
+	<p id="centertext" align="center">Welcome to the SnpZ soon to be website!</p>
+	<input type="button" value="Send An Alert" onclick="alertmepls()" class="alertmepls">Send An Alert</input>
+	</body>
+</html>
